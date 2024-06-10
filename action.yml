@@ -1,0 +1,10 @@
+# action.yml
+name: 'Dynamic env killer'
+description: 'Destroys cloudformation stacks that are no longer required'
+inputs:
+  fileName:
+    description: 'Name of file'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
