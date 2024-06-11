@@ -2,8 +2,11 @@
 name: 'Dynamic env killer'
 description: 'Destroys cloudformation stacks that are no longer required'
 inputs:
-  fileName:
+  filename:
     description: 'Name of file'
+    required: true
+  stack_prefix:
+    description: 'Prefix of stack'
     required: true
 runs:
   using: 'docker'

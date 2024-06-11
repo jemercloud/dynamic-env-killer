@@ -23,7 +23,7 @@ type Config struct {
 }
 
 var cf CFClient
-var stackPrefix string = "Samply-ecs-service-dynamic-"
+var stackPrefix string = os.Getenv("INPUT_STACK_PREFIX")
 
 func getDeployedDynamicEnvs() []string {
 	response, err := cf.client.DescribeStacks(context.TODO(), &cloudformation.DescribeStacksInput{})
